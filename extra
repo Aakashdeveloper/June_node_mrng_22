@@ -1,0 +1,72 @@
+https://code.visualstudio.com/ (Install)
+https://nodejs.org/en/  (Install)
+https://git-scm.com/downloads (Install)
+https://www.postman.com/ (Install)
+
+https://github.com/ (Create Account)
+https://github.com/Aakashdeveloper (Follow)
+
+>> Add To Chrome
+https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+
+>> Add To Vscode
+> vscode-icons
+> spellCheck
+> TabNine
+> Githistory
+> GitLens
+
+
+NPM
+Basic NodeJS(in built)(Os,file,http)
+NodeJS(full Stack App) (Node-EJs-Mongo-Express)
+Third Party Api (Weather Api)
+Redis  > 6379
+RedisWithMongo
+ImageUpload
+Node-Es6(.babel)
+MongoDb Basic >27017  (local/cloud)
+Zomato App backend
+Api with NodeJS(Rest)>1
+Swagger
+Testing
+DashBoard(Crud)
+Github
+Login/Logout(JWT)
+Oauth(with github)
+--Deployment of app---
+Heroku
+Pm2
+Docker
+Nginx
+Oauth(with google)
+GraphQl API
+NodeJs with postgres
+Paytm-Payment
+Email With Node(sendgird)(https://app.sendgrid.com/)
+Chatapp
+TelegramChat
+FIREBASE
+--------NOT---------
+React/Angular
+Html/css/jquery
+
+microservice(aws lambda)
+upload to s3 bucket
+
+>>>>>>>>NODEJS<<<<<<<<<<
+Async SingleThreaded non blocking I/0
+
+code
+||
+\/
+Machine Code
+
+engine V8 
+> open source > anybody Can contribute
+
+1,986,690
+
+package.json
+npm
+setup of app
