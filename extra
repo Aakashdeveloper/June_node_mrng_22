@@ -24,6 +24,7 @@ Third Party Api (Weather Api)
 Redis  > 6379
 RedisWithMongo
 ImageUpload
+ImageUpload(formidable)
 Node-Es6(.babel)
 MongoDb Basic >27017  (local/cloud)
 Zomato App backend
@@ -39,6 +40,7 @@ Heroku
 Pm2
 Docker
 Nginx
+Jenkins
 Oauth(with google)
 GraphQl API
 NodeJs with postgres
@@ -70,3 +72,45 @@ engine V8
 package.json
 npm
 setup of app
+
+/////////JSON///////
+Way to Represent the Data
+> JavaScript Object Notation
+[
+    {
+        "name:"John",
+        "city":"Delhi"
+    },
+    {
+        "name:"Ankit",
+        "city":"Paris",
+        "age":20
+    }
+]
+
+////////////////////////////////////////////////////////////////
+Package.json  
+> Entry point to the application
+> Contains meta data (name,version,description)
+> packages used in app
+> Command to start/stop/test application
+
+>>>Step to generate package.json
+*NodeJs Must be installed in laptop
+> go inside the folder using terminal/cmd
+> npm init
+> Answer all questions
+> type yes
+
+>>>Step to install npm package
+*NodeJs Must be installed in laptop
+> go inside the folder using terminal/cmd
+> npm i packagename / npm install packagename
+
+
+package-lock.json > Contains Chils Dependency
+.gitignore > help to avaoif puushing to git
+node_modules > contains all the packages you installe
+
+npm i package@version
+npm i express@5.11.2

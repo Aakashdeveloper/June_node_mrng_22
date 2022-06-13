@@ -1,0 +1,19 @@
+{
+  "name": "learnapp",
+  "version": "1.0.0",
+  "description": "this is about node app",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "app"
+  ],
+  "author": "nareshit",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  }
+}
