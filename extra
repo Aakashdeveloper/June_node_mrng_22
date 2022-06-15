@@ -143,13 +143,24 @@ Mobile:8919944069
 dear students, please complete your payments, link will be change from tomorrow onwards
 
 Demo: 01 ( 09-06-2022)
-Video Link: shorturl.at/ijwDP
-Password:  tzF6%36p
-
+Video Link: shorturl.at/ijwDP
+Password:  tzF6%36p
+ 
 Demo: 02 ( 10-06-2022)
-Video Link: shorturl.at/ezQW1
-Password:    2I=!4Y&8
+Video Link: shorturl.at/ezQW1
+Password:    2I=!4Y&8
 
 Demo: 03 ( 13-06-2022)
-Video Link: shorturl.at/hCIV6
-Password:   !cj@6d0i
+Video Link: shorturl.at/hCIV6
+Password:   !cj@6d0i
+ 
+Demo: 04 ( 14-06-2022)
+Video Link:  shorturl.at/mKS56
+Password:   a3+0@&G.
+
+var a = "The crossover between design and programming"
+undefined
+a.split(' ')
+(6) ['The', 'crossover', 'between', 'design', 'and', 'programming']
+a.split(' ').slice(4,6)
+(2) ['and', 'programming']
