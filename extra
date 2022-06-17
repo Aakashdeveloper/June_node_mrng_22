@@ -117,46 +117,11 @@ npm i package@version
 npm i express@5.11.2
 
 
-Dear Students please pay the fee for ________(Course name)_____ (time) by Mr. __________ Fee  Rs. _______
-
-Bank Details 
-Name: Naresh i Technologies
-A/C No. 50200022639833     
-Bank: HDFC
-A/C Type: Current Account
-IFSC Code: HDFC0001627
-MICR Code: 500240035
-Branch Code: 001627
-Branch:  Ameerpet
-
-Note: If you want to use Phonepe or Google Pay then follow the below steps.
-
-You can find the option Bank Transfer in Phonepe and Google pay. There you can enter our bank account number and you can transfer the amount.  Please mention your Name on the receipt and send a email once the payment is done to support@nareshit.com.
-  
-For any Queries, You can can Call us on +91-8179191999 or email us to support@nareshit.com 
-
-Please share your feedback to  Admin
-
 Thanks and Regards 
 Naresh
 Mobile:8919944069
 dear students, please complete your payments, link will be change from tomorrow onwards
 
-Demo: 01 ( 09-06-2022)
-Video Link: shorturl.at/ijwDP
-Password:  tzF6%36p
- 
-Demo: 02 ( 10-06-2022)
-Video Link: shorturl.at/ezQW1
-Password:    2I=!4Y&8
-
-Demo: 03 ( 13-06-2022)
-Video Link: shorturl.at/hCIV6
-Password:   !cj@6d0i
- 
-Demo: 04 ( 14-06-2022)
-Video Link:  shorturl.at/mKS56
-Password:   a3+0@&G.
 
 var a = "The crossover between design and programming"
 undefined
@@ -166,5 +131,40 @@ a.split(' ').slice(4,6)
 (2) ['and', 'programming']
 
 
-////global Package/////
-> npx nodemon
+//////Local Dependency
+> Local to the folder
+> Can only be used in the same folder
+> Added to package.json
+> All dependency should/try to go local
+
+/////global Dependency
+> Install in laptop node_modules rather than folder
+> It is not added in package.json
+> it can be used for any application
+> only packages that help to generate/run the app
+> need admin permissions
+
+/////dev Dependency
+> Same like Local Dependency
+> Only difference is of the json object
+
+///////Step to Install Global Dependency
+# Windows
+(Only One Time)
+> Open cmd as admin
+> npm i -g packagename
+
+# Mac/linux
+(Only One Time)
+> open terminal
+> sudo npm i -g packagename
+
+///////Step to Install Dev Dependency
+> open Cmd
+> npm i --save-dev packagename
+
+>>>>>>>NPX<<<<<<
+Excutable
+
+// Continoius development
+npm i -g nodemon
