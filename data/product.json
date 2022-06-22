@@ -1,7 +1,4 @@
-let express = require('express');
-let productRouter = express.Router();
-
-var products = [
+[
     {
         "id": 1,
         "product_name": "Girls top",
@@ -514,29 +511,3 @@ var products = [
         "company": "Bajaj"
     }
 ]
-
-function router(menu){
-    productRouter.route('/')
-        .get(function(req,res){
-        //res.send(products)
-        res.render('product',{title:'Product Page',products,menu})
-    })
-
-    productRouter.route('/category/:id')
-        .get(function(req,res){
-        let id = req.params.id;
-        res.send('Product for category id '+id)
-        //res.render('product',{title:'Product Page',products,menu})
-    })
-
-    productRouter.route('/details')
-        .get(function(req,res){
-        
-        res.send('Products Details')
-    })
-
-    return productRouter;
-}
-
-
-module.exports = router;

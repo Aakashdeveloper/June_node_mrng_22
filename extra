@@ -167,3 +167,19 @@ Excutable
 
 // Continoius development
 npm i -g nodemon
+
+
+function add(a,b){
+    return a+b
+}
+
+add(1,2)
+
+params
+> whem we pass after / in url
+> Params we need to define
+> use for single value
+queryParams
+> whem we pass after ? in url
+> no need to define
+> use to pass multiple values

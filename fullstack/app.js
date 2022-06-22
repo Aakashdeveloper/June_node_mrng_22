@@ -3,8 +3,15 @@ let app = express();
 let dotenv = require('dotenv');
 dotenv.config()
 let port = process.env.PORT || 8790;
-let categoryRouter = require('./src/router/categoryRouter')
-let productRouter = require('./src/router/productRouter.js');
+
+let menu = [
+    {link:'/',name:'Home'},
+    {link:'/category',name:'Category'},
+    {link:'/products',name:'Products'}
+]
+
+let categoryRouter = require('./src/router/categoryRouter')(menu)
+let productRouter = require('./src/router/productRouter.js')(menu);
 
 //middleware
 // Static File Path
@@ -17,7 +24,7 @@ app.set('view engine','ejs')
 //routes
 app.get('/',function(req,res){
     //res.send("<h1>Hii From Default Route</h1>")
-    res.render('index',{title:'Home Page'})
+    res.render('index',{title:'Home Page',menu})
 })
 
 app.use('/category', categoryRouter);

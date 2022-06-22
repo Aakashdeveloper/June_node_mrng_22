@@ -1,0 +1,33 @@
+////Setup db local/////
+> Download & Install
+(https://www.mongodb.com/try/download/community)
+> Install mongodb Compass
+(https://www.mongodb.com/try/download/compass)
+
+/////Window/////
+> inside C drive make folder data   > C:\data
+> inside data make folder db  > C:\data\db
+
+////How to start mongo server////
+> open cmd
+> go inside mongodb bin folder (C:\Program Files\Server\5.2\bin)
+> mongod
+(this will start mongodb server)
+
+////How to start mongo client////
+> open new cmd (dont close the server Cmd)
+> go inside mongodb bin folder (C:\Program Files\Server\5.2\bin)
+> mongo
+(here we will test the query)
+
+////Mac/Linux
+> open terminal 
+> mkdir data/db
+
+////How to start mongo server////
+> open terminal 
+> mongod --dbpath data/db
+
+////How to start mongo client////
+> open terminal 
+> mongo
