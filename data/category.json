@@ -1,4 +1,4 @@
-[
+db.category.insert([
     {
         "id":1,
         "category": "Fashion",
@@ -19,4 +19,4 @@
         "category": "Footwear",
         "thumb":"https://i.ibb.co/r3SZq8S/footware.jpg"
     }
-]
+])

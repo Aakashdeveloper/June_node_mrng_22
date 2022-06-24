@@ -31,3 +31,75 @@
 ////How to start mongo client////
 > open terminal 
 > mongo
+
+//////////////////////
+SQL       NoSQL
+
+RollNO | Hindi | English |
+  1    |   80  |         |
+  2    |       |  75     |
+  3    |  87   |         |
+
+  [
+    {
+        rollNo:1,
+        Hindi:80,
+        computer:78
+    },
+    {
+        rollNo:2,
+        English:75
+    },
+    {
+        rollNo:3,
+        Hindi:87
+    },
+  ]
+
+
+SQL         NoSQL
+Database    Database
+Table       Collections
+row         Document
+Select      find
+Insert      insert
+Delete      remove
+update      update
+
+
+Default Port > 27017
+
+>>>>>>Show All DBs<<<<<<<<
+> show dbs
+
+>>>>Go Inside Db
+> use databasename
+
+>>>>See Collections
+> show collections
+
+>>>>Find all records
+> db.collectionName.find()
+> db.products.find().pretty() //only for console not code
+
+////Creating Database
+use dbname
+
+////insert data
+db.collectionName.insert({"name":"Latika"})
+
+////////////////////////////////
+_id > object Id
+> every record will have _id
+> primaryKey & unique with each record
+
+12byte 
+5 bytes (Random Number)
+3 bytes (Series)
+4 byte  (timestamp)
+
+///////////////////////////////////
+Find on basis of condition
+
+db.products.find({'product_name':"Women's Jeans"}).pretty()
+db.products.find({'product_name':"Women's Jeans",Size:'L'}).pretty()
