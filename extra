@@ -21,10 +21,10 @@ NPM
 Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
 Third Party Api (Weather Api)
-////////////////////////////////
 Redis  > 6379
-RedisWithMongo
+////////////////////////////////
 ImageUpload
+RedisWithMongo
 ImageUpload(formidable)
 Node-Es6(.babel)
 MongoDb Basic >27017  (local/cloud)
@@ -183,3 +183,13 @@ queryParams
 > whem we pass after ? in url
 > no need to define
 > use to pass multiple values
+
+
+///download redis
+download Redis > https://github.com/dmajkic/redis/downloads
+
+KEYS *
+set city 'Delhi' ex 30000
+get city
+del keyname
+FLUSHALL
