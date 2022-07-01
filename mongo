@@ -103,3 +103,26 @@ Find on basis of condition
 
 db.products.find({'product_name':"Women's Jeans"}).pretty()
 db.products.find({'product_name':"Women's Jeans",Size:'L'}).pretty()
+
+mongodb+srv://test:test123@cluster0.f8vmc.mongodb.net/?retryWrites=true&w=majority
+mongodb://localhost:27017
+
+
+db.restaurants.find({'restaurant_id':4,'state_id':2}).pretty()
+
+db.restaurants.find({'mealTypes.mealtype_id':4,'state_id':2}).pretty()
+
+
+db.restaurants.find({condition},{projection}).pretty()
+
+db.restaurants.find({'mealTypes.mealtype_id':4},{restaurant_name:1,_id:0,cost:1,mealTypes:1}).pretty()
+
+
+
+db.restaurants.find({cost:{$lt:500}},{restaurant_name:1,_id:0,cost:1}).pretty()
+
+db.restaurants.find({cost:{$gt:1000}},{restaurant_name:1,_id:0,cost:1}).pretty()
+
+db.restaurants.find({cost:{$gt:500,$lt:800}},{restaurant_name:1,_id:0,cost:1}).pretty()
+
+db.restaurants.find({'mealTypes.mealtype_id':{$in:[1,4,5]}},{restaurant_name:1,_id:0,cost:1}).pretty()
