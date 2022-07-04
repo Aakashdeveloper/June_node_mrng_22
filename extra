@@ -26,9 +26,8 @@ ImageUpload
 ImageUpload(formidable)
 RedisWithMongo
 Node-Es6(.babel)
-////////////////////////////////
 MongoDb Basic >27017  (local/cloud)
-
+////////////////////////////////
 Zomato App backend
 Api with NodeJS(Rest)>1
 Swagger
@@ -47,7 +46,7 @@ Oauth(with google)
 GraphQl API
 NodeJs with postgres
 Paytm-Payment
-Email With Node(sendgird)(https://app.sendgrid.com/)
+Email With Node(nodemailer)
 Chatapp
 TelegramChat
 FIREBASE

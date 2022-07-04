@@ -511,3 +511,17 @@ db.products.insert([
         "company": "Bajaj"
     }
 ])
+
+
+
+db.products.insert( {
+    "id": 47,
+    "product_name": "Shirt",
+    "category": "Fashion",
+    "category_id": 1,
+    "Price": 2000,
+    "Size": "XX",
+    "Image": "https://i.ibb.co/zRKT2yV/download-1.jpg",
+    "Color": "Blue",
+    "Brand": "Allen Solly"
+},)

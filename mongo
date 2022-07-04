@@ -126,3 +126,67 @@ db.restaurants.find({cost:{$gt:1000}},{restaurant_name:1,_id:0,cost:1}).pretty()
 db.restaurants.find({cost:{$gt:500,$lt:800}},{restaurant_name:1,_id:0,cost:1}).pretty()
 
 db.restaurants.find({'mealTypes.mealtype_id':{$in:[1,4,5]}},{restaurant_name:1,_id:0,cost:1}).pretty()
+
+
+//////insert/////
+db.collection.insert({name:'abc',city:'Paris'})
+
+db.collection.insert([
+  {name:'abc',city:'Paris'},
+  {name:'abc',city:'Paris'}
+                    ])
+
+
+//////Update 
+db.collectioName.update({condition},{update query})
+
+db.user.update(
+  {"name":"Anand"},
+  {
+    $set:{
+      "city":"Delhi",
+      "age":24
+    }
+  },
+  {
+    upsert:true
+  }
+)
+
+db.user.update(
+  {"name":"Arush"},
+  {
+    $set:{
+      "age":25
+    }
+  }
+)
+
+db.user.update(
+  {"name":"Latika"},
+  {
+    $unset:{
+      "age":1
+    }
+  }
+)
+
+/////////Delete///////
+db.collection.remove({}) //delete all records
+
+db.collection.remove({condition}) //delete particular records
+
+///////////Aggregation//////
+db.products.aggregate([
+    {$match:{Color:'Blue'}},
+    {$group:{
+      _id:'$Brand',
+      count:{$sum:1}
+    }},
+    {$sort:{Price:1}},
+  ])
+
+
+db.products.find({Color:'Blue'},{product_name:1,_id:0,Price:1}).sort({Price:1})
+
+db.products.find({Color:'Blue'},{product_name:1,_id:0,Price:1}).sort({Price:-1}).skip(8).limit(2)
