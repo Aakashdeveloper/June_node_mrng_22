@@ -13,13 +13,19 @@
 > (Get) Restaurants wrt to mealType
 # http://localhost:9100/restaurants?mealId=3
 > (Get) Filter wrt to cost
+# http://localhost:9100/filter/2?lcost=500&hcost=1000
 > (Get) Filter wrt to Cuisine
+# http://localhost:9100/filter/2?cuisine=1
 > (Get) Sort on basis of Price
+# http://localhost:9100/filter/2?sort=-1
 > (Get) Pagination
+# http://localhost:9100/filter/2?skip=15&limit=5
 
 //Page3
 > (Get) Details of restaurant
+# http://localhost:9100/details/618776b162a1816f885956c3
 > (Get) Menu of restaurant
+# http://localhost:9100/menu/5
 
 //Page4
 > (Post) All the menu details

@@ -36,6 +36,7 @@ DashBoard(Crud)
 Github
 Login/Logout(JWT)
 Oauth(with github)
+
 --Deployment of app---
 Heroku
 Pm2
