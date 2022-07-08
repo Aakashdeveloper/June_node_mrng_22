@@ -29,11 +29,36 @@
 
 //Page4
 > (Post) All the menu details
+# http://localhost:9100/menuItem
+# {"id":[8,4,9]}
 > (Post) Place order
+# http://llocalhost:9100/placeOrder
+{
+	"orderId":3,
+	"name": "Nikita",
+    "email": "niki@gmail.com",
+    "address": "Hom 12",
+    "phone": 934645457,
+     "cost": 765,
+     "menuItem": [24,45,1]
+}
+
 
 //Page5
 > (Get) list of Order Placed
+# http://localhost:9100/orders
 > (Get) Order wrt to email
+# http://localhost:9100/Orders?email=niki@gmail.com
 
 > (Put) update order
+# http://localhost:9100/updateOrder
+{
+	"_id":"62c79f4c2e096fe84f48e92f",
+	"status":"Delivered"
+}
+
 > (Delete) Delete order
+# http://localhost:9100/removeOrder
+{
+	"_id":"62c79f4c2e096fe84f48e92f"
+}

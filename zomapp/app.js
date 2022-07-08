@@ -4,7 +4,7 @@ let mongo = require('mongodb');
 let MongoClient = mongo.MongoClient;
 let dotenv = require('dotenv');
 dotenv.config();
-let mongoUrl = process.env.mongoLiveUrl;
+let mongoUrl = process.env.mongoUrl;
 let bodyParser = require('body-parser');
 let cors = require('cors');
 let port = process.env.PORT || 7100;
@@ -121,8 +121,6 @@ app.get('/menu/:id',(req,res) => {
     })  
 })
 
-
-
 //MealType
 app.get('/mealType',(req,res) => {
     db.collection('mealType').find().toArray((err,data) => {
@@ -131,10 +129,74 @@ app.get('/mealType',(req,res) => {
     })  
 })
 
+//menu wrt to ids {"id":[8,4,9]}
+app.post('/menuItem',(req,res) => {
+    console.log(req.body);
+    if(Array.isArray(req.body.id)){
+        db.collection('menu').find({menu_id:{$in:req.body.id}}).toArray((err,data) => {
+            if(err) throw err;
+            res.send(data)
+        })
+    }else{
+        res.send('Please pass the array')
+    }
+})
+
+//Place Order
+app.post('/placeOrder',(req,res) => {
+    db.collection('orders').insert(req.body,(err) => {
+        if(err) throw err;
+        res.send('Order Placed')
+    })
+})
+
+//Place Order
+app.get('/orders',(req,res) => {
+    let query = {}
+    let email =req.query.email
+    if(email){
+        query = {email:req.query.email}
+    }
+    db.collection('orders').find(query).toArray((err,data) => {
+        if(err) throw err;
+        res.send(data)
+    })
+})
+
+//updateOrder
+app.put('/updateOrder',(req,res) => {
+    db.collection('orders').updateOne(
+        {_id:mongo.ObjectId(req.body._id)},
+        {
+            $set:{
+                "status":req.body.status
+            }
+        },(err,result) => {
+            if(err) throw err;
+            res.status(200).send('Status Updated successfully')
+        }
+    )
+})
+
+//Delete order
+app.delete('/removeOrder',(req,res) => {
+    let id = mongo.ObjectId(req.body._id)
+   db.collection('orders').find({_id:id}).toArray((err,result) => {
+       if(result.length !== 0){
+           db.collection('orders').deleteOne({_id:id},(err,result) => {
+               if(err) throw err;
+               res.send('Order Deleted')
+           })
+       }else{
+           res.send('No Order Found')
+       }
+   })
+})
+
 
 MongoClient.connect(mongoUrl,(err,client)=>{
     if(err) console.log(`Error while connecting to Mongo`)
-    db = client.db('augintern');
+    db = client.db('internfeb');
     app.listen(port,() => {
         console.log(`Listen on port ${port}`)
     })
