@@ -1,0 +1,30 @@
+{
+    "openapi":"3.0.0",
+    "info":{
+        "description": "This is the api for users",
+        "version":"__version__"
+    },
+    "tags":[
+        {
+            "name":"PUBLIC ROUTE",
+            "description":"PUBLIC ROUTE"
+        }
+    ],
+    "paths":{
+        "/health":{
+            "summary":"Testing Health Check for app",
+            "get":{
+                "description":"Testing Health Check for app",
+                "tags":["PUBLIC ROUTE"],
+                "responses":{
+                    "200":{
+                        "description":"Health Check Pass"
+                    },
+                    "404":{
+                        "description":"Health Check Fail"
+                    }
+                }
+            }
+        }
+    }
+}
