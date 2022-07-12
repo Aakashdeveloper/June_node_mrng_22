@@ -25,6 +25,164 @@
                     }
                 }
             }
+        },
+        "/users":{
+            "summary":"Testing User",
+            "get":{
+                "description":"Get Users",
+                "tags":["PUBLIC ROUTE"],
+                "parameters":[
+                    {
+                        "in":"query",
+                        "name":"role",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description": "Choose Role as admin or user"
+                    },
+                    {
+                        "in":"query",
+                        "name":"city",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description": "Enter User city"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Health Check Pass"
+                    },
+                    "404":{
+                        "description":"Health Check Fail"
+                    }
+                }
+            }
+        },
+        "/user/{id}":{
+            "summary":"Testing Particular User",
+            "get":{
+                "description":"Get  Particular Users",
+                "tags":["PUBLIC ROUTE"],
+                "parameters":[
+                    {
+                        "in":"path",
+                        "name":"id",
+                        "required":true,
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description": "Enter User id"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Health Check Pass"
+                    },
+                    "404":{
+                        "description":"Health Check Fail"
+                    }
+                }
+            }
+        },
+        "/addUser":{
+            "summary":"Add New User",
+            "post":{
+                "description":"Adding New Users",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "name":"Arushi",
+                                "city":"Venice",
+                                "phone":353456456,
+                                "role":"User",
+                                "isActive":true
+                            }
+                        }
+                    }
+                }
+                ,
+                "responses":{
+                    "200":{
+                        "description":"Health Check Pass"
+                    },
+                    "404":{
+                        "description":"Health Check Fail"
+                    }
+                }
+            }
+        },
+        "/updateUser":{
+            "summary":"Update User",
+            "put":{
+                "description":"Update Users",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id": "62cce31b3cf1c1b109d01608",
+                                "name":"Arushi",
+                                "city":"Venice",
+                                "phone":353456456,
+                                "role":"User",
+                                "isActive":true
+                            }
+                        }
+                    }
+                }
+                ,
+                "responses":{
+                    "200":{
+                        "description":"Health Check Pass"
+                    },
+                    "404":{
+                        "description":"Health Check Fail"
+                    }
+                }
+            }
+        },
+        "/deleteUser":{
+            "summary":"Delete User",
+            "delete":{
+                "description":"Delete Users",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id": "62cce31b3cf1c1b109d01608"
+                            }
+                        }
+                    }
+                }
+                ,
+                "responses":{
+                    "200":{
+                        "description":"Health Check Pass"
+                    },
+                    "404":{
+                        "description":"Health Check Fail"
+                    }
+                }
+            }
         }
     }
 }
