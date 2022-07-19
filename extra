@@ -33,13 +33,13 @@ Swagger
 Testing
 DashBoard(Crud)
 Github
+--Deployment of app---
+Heroku
+Pm2
 ////////////////////////////////
 Login/Logout(JWT)
 Oauth(with github)
 
---Deployment of app---
-Heroku
-Pm2
 Docker
 Nginx
 Jenkins
@@ -195,3 +195,10 @@ set city 'Delhi' ex 30000
 get city
 del keyname
 FLUSHALL
+
+//////
+> npm i -g pm2
+
+pm2 start appname
+pm2 stop filename
+pm2 status
