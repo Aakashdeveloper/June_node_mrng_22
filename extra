@@ -40,16 +40,15 @@ Docker
 Nginx
 Jenkins
 Login/Logout(JWT)
-////////////////////////////////
 Oauth(with github)
-
+TelegramChat
+////////////////////////////////
 Oauth(with google)
 GraphQl API
 NodeJs with postgres
 Paytm-Payment
 Email With Node(nodemailer)
 Chatapp
-TelegramChat
 FIREBASE
 --------NOT---------
 React/Angular
@@ -227,3 +226,4 @@ npm i bcryptjs body-parser cors express jsonwebtoken mongoose
 (Header) => {'x-access-token':'token value from login'}
 
 https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps
+
